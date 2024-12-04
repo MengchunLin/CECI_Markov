@@ -18,6 +18,7 @@ test='test - 複製.csv'
 eightSoil='8soil.csv'
 CECI='markov_matrix.csv'
 CTCI='CTCI.csv'
+K = 15
 # -----------testing file----------------
 # 記錄開始時間
 start_time = time.time()
@@ -152,7 +153,7 @@ def calculate_transition_matrix(matrix,hole_location):
         for j in range(np.size(Tmatrix_V, 1)):
             Tmatrix_V[i][j] = Tmatrix_V[i][j] / count_V[i]
 
-    K = 9.3
+
     HPCM = np.zeros([len(count_V), len(count_V)])
     Tmatrix_H = np.zeros([len(count_V), len(count_V)])
 
